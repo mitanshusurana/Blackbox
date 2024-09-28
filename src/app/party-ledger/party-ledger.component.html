@@ -1,0 +1,6 @@
+<h1>Party Ledger</h1>
+<ul>
+  <li *ngFor="let entry of ledgerEntries">
+    {{ entry.party }}: ${{ entry.amount }}
+  </li>
+</ul>

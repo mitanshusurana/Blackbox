@@ -1,0 +1,20 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names                           |  Raw size | Estimated transfer size
+chunk-TJUFG2HY.js     | -                               | 126.52 kB |                35.93 kB
+main-PWATPSLR.js      | main                            |  86.40 kB |                21.55 kB
+polyfills-FFHMD2TL.js | polyfills                       |  34.52 kB |                11.28 kB
+styles-5INURTSO.css   | styles                          |   0 bytes |                 0 bytes
+
+                      | Initial total                   | 247.43 kB |                68.76 kB
+
+Lazy chunk files      | Names                           |  Raw size | Estimated transfer size
+chunk-KJP4OXUK.js     | todays-transactions-component   | 796 bytes |               796 bytes
+chunk-D2G5656C.js     | profit-loss-component           | 789 bytes |               789 bytes
+chunk-WXDKUJCQ.js     | current-stock-summary-component | 757 bytes |               757 bytes
+chunk-LOZ3FJ7M.js     | party-ledger-component          | 735 bytes |               735 bytes
+
+Application bundle generation complete. [2.960 seconds]
+
+Output location: /home/user/suranagems_workspace/dist/suranagems_workspace
+
