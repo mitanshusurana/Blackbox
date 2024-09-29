@@ -1,10 +1,15 @@
+
 <h1>Record Transaction</h1>
 <form (ngSubmit)="onSubmit($event)">
   <label for="type">Transaction Type:</label>
-  <select id="type" [(ngModel)]="transaction.type" name="type" required>
-    <option value="sale">Sale</option>
-    <option value="purchase">Purchase</option>
-  </select>
+  <div>
+    <button type="button" [class.active]="transaction.type === 'sale'" (click)="setTransactionType('sale')">Sale</button>
+    <button type="button" [class.active]="transaction.type === 'purchase'" (click)="setTransactionType('purchase')">Purchase</button>
+  </div>
+  <br>
+  <label for="party">Party:</label>
+  <ng-select [items]="parties" bindLabel="name" [(ngModel)]="transaction.party" name="party" [searchable]="true" (add)="onAddParty()">
+  </ng-select>
   <br>
   <label for="description">Description:</label>
   <input type="text" id="description" [(ngModel)]="transaction.description" name="description" required>
