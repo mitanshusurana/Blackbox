@@ -1,7 +1,9 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -9,7 +11,6 @@ import { TodaysTransactionsComponent } from './todays-transactions/todays-transa
 import { CurrentStockSummaryComponent } from './current-stock-summary/current-stock-summary.component';
 import { PartyLedgerComponent } from './party-ledger/party-ledger.component';
 import { ProfitLossComponent } from './profit-loss/profit-loss.component';
-import { importProvidersFrom } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { importProvidersFrom } from '@angular/core';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    NgSelectModule,
     RouterModule.forRoot([
       { path: '', component: DashboardComponent },
       { path: 'todays-transactions', loadComponent: () => import('./todays-transactions/todays-transactions.component').then(m => m.TodaysTransactionsComponent) },
