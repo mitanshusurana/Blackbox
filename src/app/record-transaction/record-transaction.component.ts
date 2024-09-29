@@ -1,12 +1,13 @@
 
 import { Component } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-record-transaction',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgSelectModule],
   templateUrl: './record-transaction.component.html',
   styleUrls: ['./record-transaction.component.css']
 })
