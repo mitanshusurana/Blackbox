@@ -62,7 +62,7 @@
     display: flex;
   }
 
-  .navbar-toggle.active + .navbar-menu {
+  .navbar-menu.open {
     display: flex;
   }
 }

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodaysTransactionsComponent } from './todays-transactions/todays-transactions.component';
 import { CurrentStockSummaryComponent } from './current-stock-summary/current-stock-summary.component';
@@ -15,7 +16,8 @@ import { ProfitLossComponent } from './profit-loss/profit-loss.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

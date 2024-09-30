@@ -1,11 +1,12 @@
+
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class DashboardComponent {
+export class NavbarComponent {
   toggleDrawer() {
     const navbarMenu = document.querySelector('.navbar-menu');
     if (navbarMenu) {

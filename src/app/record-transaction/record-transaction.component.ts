@@ -41,6 +41,15 @@ export class RecordTransactionComponent {
     console.log('Transaction recorded:', this.transaction);
     form.resetForm();
   }
+
+  resetForm() {
+    this.transaction = {
+      type: '',
+      description: '',
+      amount: 0,
+      party: null
+    };
+  }
 }
 
 // This is a test comment to create a difference between branches
