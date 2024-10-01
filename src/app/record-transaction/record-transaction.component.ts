@@ -15,7 +15,12 @@ export class RecordTransactionComponent {
   transaction = {
     type: '',
     description: '',
+    weight: 0,
+    rate: 0,
+    purity: 0,
     amount: 0,
+    cashTaken: 0,
+    cashGiven: 0,
     party: null
   };
 
@@ -42,11 +47,27 @@ export class RecordTransactionComponent {
     form.resetForm();
   }
 
+  calculateAmount() {
+    this.transaction.amount = this.transaction.rate * (this.transaction.purity / 100) * this.transaction.weight;
+  }
+
+  checkParty() {
+    const partyExists = this.parties.some(party => party.name === this.transaction.party);
+    if (!partyExists) {
+      this.router.navigate(['/create-party']);
+    }
+  }
+
   resetForm() {
     this.transaction = {
       type: '',
       description: '',
+      weight: 0,
+      rate: 0,
+      purity: 0,
       amount: 0,
+      cashTaken: 0,
+      cashGiven: 0,
       party: null
     };
   }

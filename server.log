@@ -1,9 +1,22 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names                           |  Raw size
+polyfills.js        | polyfills                       |  90.20 kB | 
+main.js             | main                            |  10.75 kB | 
+styles.css          | styles                          |   1.11 kB | 
 
-Warning: This is a simple server for use in testing or debugging Angular applications
-locally. It hasn't been reviewed for security issues.
+                    | Initial total                   | 102.06 kB
 
-Binding this server to an open connection can result in compromising your application or
-computer. Using a different host than the one passed to the "--host" flag might result in
-websocket connection issues. You might need to use "--disable-host-check" if that's the
-case.
-    
+Lazy chunk files    | Names                           |  Raw size
+chunk-CIDQATSB.js   | record-transaction-component    |  13.45 kB | 
+chunk-4T3M5JQO.js   | todays-transactions-component   |   2.30 kB | 
+chunk-KZMVPVEZ.js   | current-stock-summary-component |   2.26 kB | 
+chunk-6QMSL4OQ.js   | profit-loss-component           |   2.16 kB | 
+chunk-YH7UORMM.js   | party-ledger-component          |   2.12 kB | 
+
+Application bundle generation complete. [2.799 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+  ➜  press h + enter to show help
