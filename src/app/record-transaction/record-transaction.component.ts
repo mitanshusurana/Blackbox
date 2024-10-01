@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NgForm, FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Router } from '@angular/router';
@@ -7,11 +8,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-record-transaction',
   standalone: true,
-  imports: [FormsModule, NgSelectModule],
+  imports: [FormsModule, NgSelectModule, ReactiveFormsModule],
   templateUrl: './record-transaction.component.html',
   styleUrls: ['./record-transaction.component.css']
 })
 export class RecordTransactionComponent {
+  partyControl = new FormControl();
   transaction = {
     type: '',
     description: '',
@@ -30,7 +32,11 @@ export class RecordTransactionComponent {
     { id: 3, name: 'Party C' }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.partyControl.valueChanges.subscribe(value => {
+      this.checkParty(value);
+    });
+  }
 
   setTransactionType(type: string) {
     this.transaction.type = type;
@@ -51,8 +57,8 @@ export class RecordTransactionComponent {
     this.transaction.amount = this.transaction.rate * (this.transaction.purity / 100) * this.transaction.weight;
   }
 
-  checkParty() {
-    const partyExists = this.parties.some(party => party.name === this.transaction.party);
+  checkParty(partyName: string) {
+    const partyExists = this.parties.some(party => party.name === partyName);
     if (!partyExists) {
       this.router.navigate(['/create-party']);
     }
