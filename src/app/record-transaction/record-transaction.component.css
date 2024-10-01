@@ -60,6 +60,7 @@ button[type="reset"]:hover {
 .ng-select {
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #ffffff; /* Add background color */
 }
 
 .ng-select .ng-select-container {

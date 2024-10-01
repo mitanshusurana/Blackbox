@@ -1,0 +1,26 @@
+
+> suranagems-workspace@0.0.0 start
+> ng serve --port 4400
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names                           |  Raw size
+polyfills.js        | polyfills                       |  90.20 kB | 
+main.js             | main                            |  10.75 kB | 
+styles.css          | styles                          |   1.11 kB | 
+
+                    | Initial total                   | 102.06 kB
+
+Lazy chunk files    | Names                           |  Raw size
+chunk-UKOEZC5I.js   | record-transaction-component    |  14.72 kB | 
+chunk-4T3M5JQO.js   | todays-transactions-component   |   2.30 kB | 
+chunk-KZMVPVEZ.js   | current-stock-summary-component |   2.26 kB | 
+chunk-6QMSL4OQ.js   | profit-loss-component           |   2.16 kB | 
+chunk-YH7UORMM.js   | party-ledger-component          |   2.12 kB | 
+
+Application bundle generation complete. [2.971 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4400/
+  ➜  press h + enter to show help

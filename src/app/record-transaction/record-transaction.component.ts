@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NgForm, FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-record-transaction',
   standalone: true,
-  imports: [FormsModule, NgSelectModule, ReactiveFormsModule],
+  imports: [FormsModule, NgSelectModule, ReactiveFormsModule, CommonModule],
   templateUrl: './record-transaction.component.html',
   styleUrls: ['./record-transaction.component.css']
 })
@@ -40,6 +41,11 @@ export class RecordTransactionComponent {
 
   setTransactionType(type: string) {
     this.transaction.type = type;
+    if (type === 'sale') {
+        this.transaction.cashGiven = 0;
+    } else if (type === 'purchase') {
+        this.transaction.cashTaken = 0;
+    }
   }
 
   onAddParty() {

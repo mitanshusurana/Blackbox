@@ -26,11 +26,14 @@
   <label for="amount">Amount:</label>
   <input type="number" id="amount" [(ngModel)]="transaction.amount" name="amount" readonly>
   <br>
-  <label for="cashTaken">Cash Taken:</label>
-  <input type="number" id="cashTaken" [(ngModel)]="transaction.cashTaken" name="cashTaken">
-  <br>
-  <label for="cashGiven">Cash Given:</label>
-  <input type="number" id="cashGiven" [(ngModel)]="transaction.cashGiven" name="cashGiven">
+  <div *ngIf="transaction.type === 'sale'">
+    <label for="cashTaken">Cash Taken:</label>
+    <input type="number" id="cashTaken" [(ngModel)]="transaction.cashTaken" name="cashTaken">
+  </div>
+  <div *ngIf="transaction.type === 'purchase'">
+    <label for="cashGiven">Cash Given:</label>
+    <input type="number" id="cashGiven" [(ngModel)]="transaction.cashGiven" name="cashGiven">
+  </div>
   <br>
   <button type="button" (click)="checkParty(partyControl.value)">Check Party</button>
   <br>
