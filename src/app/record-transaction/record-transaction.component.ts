@@ -58,6 +58,7 @@ export class RecordTransactionComponent {
   }
 
   checkParty(partyName: string) {
+    debugger;
     const partyExists = this.parties.some(party => party.name === partyName);
     if (!partyExists) {
       this.router.navigate(['/create-party']);

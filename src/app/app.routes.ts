@@ -1,3 +1,7 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { CreatePartyComponent } from './create-party/create-party.component';
+
+export const routes: Routes = [
+  { path: 'create-party', component: CreatePartyComponent }
+];

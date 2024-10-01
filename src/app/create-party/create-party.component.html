@@ -1,0 +1,6 @@
+<h2>Create Party</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="name">Party Name:</label>
+  <input type="text" id="name" [(ngModel)]="party.name" name="name" required>
+  <button type="submit">Create Party</button>
+</form>
