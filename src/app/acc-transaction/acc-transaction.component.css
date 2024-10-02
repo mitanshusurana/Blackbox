@@ -67,20 +67,18 @@ button[type="reset"]:hover {
 .ng-select {
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f0f0f0; /* Change background color to light grey */
+    background-color: wheat; /* Ensure fully opaque white background */
     z-index: 1050; /* Increase z-index to ensure dropdown is above other elements */
     margin-bottom: 20px; /* Add margin to prevent overlap */
     position: relative; /* Ensure correct positioning */
 }
 
-.ng-select .ng-select-container {
-    border: none;
+.ng-dropdown-panel .ng-dropdown-panel-items {
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    z-index: 1050;
+    background: wheat;
 }
 
-.ng-select .ng-select-container .ng-value-container {
-    padding: 8px;
-}
-
-.ng-select .ng-select-container .ng-input {
-    padding: 8px;
-}

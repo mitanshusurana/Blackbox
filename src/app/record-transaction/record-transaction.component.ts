@@ -30,7 +30,8 @@ export class RecordTransactionComponent {
   parties = [
     { id: 1, name: 'Party A' },
     { id: 2, name: 'Party B' },
-    { id: 3, name: 'Party C' }
+    { id: 3, name: 'Party C' },
+    { id: 0, name: 'Create Party' }
   ];
 
   constructor(private router: Router) {
@@ -63,15 +64,18 @@ export class RecordTransactionComponent {
     this.transaction.amount = this.transaction.rate * (this.transaction.purity / 100) * this.transaction.weight;
   }
 
-  checkParty(partyName: string) {
+  checkParty(partyName: any) {
+    if(partyName.name === "Create Party"){
+      this.router.navigate(['/create-party']);
+    }
     console.log('Checking party:', partyName);
-    const partyExists = this.parties.some(party => party.name === partyName);
+    this.parties.forEach(party => console.log(party.name));
+    const partyExists = this.parties.some(party => party.name === partyName.name);
     console.log('Party exists:', partyExists);
     if (!partyExists) {
       this.router.navigate(['/create-party']);
     }
   }
-
   resetForm() {
     this.transaction = {
       type: '',
