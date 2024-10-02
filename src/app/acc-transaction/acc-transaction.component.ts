@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-acc-transaction',
@@ -13,6 +15,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AccTransactionComponent {
   transaction = { type: '', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 };
+  parties = [{ name: 'Party A' }, { name: 'Party B' }, { name: 'Party C' }];
+  partyControl = new FormControl();
 
   constructor(private router: Router) {}
 
@@ -37,6 +41,10 @@ export class AccTransactionComponent {
 
   navigateToAccTransaction() {
     this.transaction.type = 'account';
+  }
+
+  onAddParty() {
+    // Logic to handle adding a new party
   }
 
   resetForm() {
