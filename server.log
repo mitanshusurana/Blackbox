@@ -1,0 +1,28 @@
+
+> suranagems-workspace@0.0.0 start
+> ng serve
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names                           |  Raw size
+polyfills.js        | polyfills                       |  90.20 kB | 
+main.js             | main                            |  10.99 kB | 
+styles.css          | styles                          |   1.11 kB | 
+
+                    | Initial total                   | 102.31 kB
+
+Lazy chunk files    | Names                           |  Raw size
+chunk-2HON3AIA.js   | record-transaction-component    |  14.75 kB | 
+chunk-LKNMFJQI.js   | acc-transaction-component       |  14.68 kB | 
+chunk-BUSRPEBE.js   | todays-transactions-component   |   3.85 kB | 
+chunk-BOD4WFYW.js   | profit-loss-component           |   3.71 kB | 
+chunk-ZQ473QVN.js   | party-ledger-component          |   3.67 kB | 
+chunk-UDSME6VI.js   | create-party-component          |   2.52 kB | 
+chunk-KZMVPVEZ.js   | current-stock-summary-component |   2.26 kB | 
+
+Application bundle generation complete. [3.091 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+  ➜  press h + enter to show help

@@ -14,7 +14,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
   styleUrls: ['./acc-transaction.component.css']
 })
 export class AccTransactionComponent {
-  transaction = { type: '', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 };
+  transaction = { type: 'account', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 }; // Set account as default
   parties = [{ name: 'Party A' }, { name: 'Party B' }, { name: 'Party C' }];
   partyControl = new FormControl();
 
@@ -27,6 +27,7 @@ export class AccTransactionComponent {
 
   setSubType(subType: string) {
     this.transaction.subType = subType;
+    this.resetForm(); // Reset form when subType changes
   }
 
   setAction(action: string) {
