@@ -19,7 +19,7 @@ import { ProfitLossComponent } from './profit-loss/profit-loss.component';
     AppComponent,
     DashboardComponent,
     NavbarComponent,
-    AccTransactionComponent
+
   ],
   imports: [
     BrowserModule,
