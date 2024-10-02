@@ -15,7 +15,14 @@ import { NgSelectModule } from '@ng-select/ng-select';
 })
 export class AccTransactionComponent {
   transaction = { type: 'account', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 }; // Set account as default
-  parties = [{ name: 'Party A' }, { name: 'Party B' }, { name: 'Party C' }];
+  parties = [
+    { name: 'Party A' },
+    { name: 'Party B' },
+    { name: 'Party C' },
+    { name: 'Party D' },
+    { name: 'Party E' },
+    { name: 'Party F' }
+  ];
   partyControl = new FormControl();
 
   constructor(private router: Router) {}
@@ -32,6 +39,7 @@ export class AccTransactionComponent {
 
   setAction(action: string) {
     this.transaction.action = action;
+    this.resetForm(); // Reset form when action changes
   }
 
   navigateToRecordTransaction() {
