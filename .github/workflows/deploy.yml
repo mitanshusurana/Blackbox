@@ -28,12 +28,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        ssh: true
+        github_token: \${{ secrets.PERSONAL_ACCESS_TOKEN }}
         publish_dir: ./docs
-    env:
-        SSH_AUTH_SOCK: /tmp/ssh_auth_sock
-    run: |
-        ssh-add \${{ secrets.SSH_PRIVATE_KEY }}
-        git config --global user.name "Mitanshu Surana"
-        git config --global user.email "mitanshusurana@gmail.com"
         publish_dir: ./docs
