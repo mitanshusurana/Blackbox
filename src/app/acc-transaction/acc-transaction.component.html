@@ -1,9 +1,9 @@
 
 <div class="acc-transaction">
   <h2>Account Transaction</h2>
-  <button type="button" [class.active]="transaction.type === 'sale'" (click)="setTransactionType('sale')">Sale</button>
-  <button type="button" [class.active]="transaction.type === 'purchase'" (click)="setTransactionType('purchase')">Purchase</button>
-  <button type="button" (click)="navigateToAccTransaction()">Account</button>
+  <button type="button" [class.active]="transaction.type === 'sale'" (click)="setTransactionType('sale'); resetForm()">Sale</button>
+  <button type="button" [class.active]="transaction.type === 'purchase'" (click)="setTransactionType('purchase'); resetForm()">Purchase</button>
+  <button type="button" (click)="navigateToAccTransaction(); resetForm()">Account</button>
   <br>
   <button type="button" [class.active]="transaction.subType === 'metal'" (click)="setSubType('metal')">Metal</button>
   <button type="button" [class.active]="transaction.subType === 'cash'" (click)="setSubType('cash')">Cash</button>
