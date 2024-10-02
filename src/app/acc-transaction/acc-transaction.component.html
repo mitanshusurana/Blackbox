@@ -3,7 +3,7 @@
   <form (ngSubmit)="onSubmit($event)">
     <button type="button" [class.active]="transaction.type === 'sale'" (click)="setTransactionType('sale'); resetForm()">Sale</button>
     <button type="button" [class.active]="transaction.type === 'purchase'" (click)="setTransactionType('purchase'); resetForm()">Purchase</button>
-    <button type="button" (click)="navigateToAccTransaction(); resetForm()">Account</button>
+    <button type="button" [class.active]="transaction.type === 'account'" >Account</button>
     <br>
     <button type="button" [class.active]="transaction.subType === 'metal'" (click)="setSubType('metal')">Metal</button>
     <button type="button" [class.active]="transaction.subType === 'cash'" (click)="setSubType('cash')">Cash</button>
