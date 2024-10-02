@@ -67,7 +67,7 @@ button[type="reset"]:hover {
 .ng-select {
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #ffffff; /* Ensure fully opaque white background */
+    background-color: #f0f0f0; /* Change background color to light grey */
     z-index: 1050; /* Increase z-index to ensure dropdown is above other elements */
     margin-bottom: 20px; /* Add margin to prevent overlap */
     position: relative; /* Ensure correct positioning */
