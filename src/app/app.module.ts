@@ -31,7 +31,9 @@ import { ProfitLossComponent } from './profit-loss/profit-loss.component';
       { path: 'current-stock-summary', loadComponent: () => import('./current-stock-summary/current-stock-summary.component').then(m => m.CurrentStockSummaryComponent) },
       { path: 'party-ledger', loadComponent: () => import('./party-ledger/party-ledger.component').then(m => m.PartyLedgerComponent) },
       { path: 'profit-loss', loadComponent: () => import('./profit-loss/profit-loss.component').then(m => m.ProfitLossComponent) },
-      { path: 'record-transaction', loadComponent: () => import('./record-transaction/record-transaction.component').then(m => m.RecordTransactionComponent) }
+      { path: 'record-transaction', loadComponent: () => import('./record-transaction/record-transaction.component').then(m => m.RecordTransactionComponent) },
+      { path: 'create-party', loadComponent: () => import('./create-party/create-party.component').then(m => m.CreatePartyComponent) },
+      { path: 'acc-transaction', loadComponent: () => import('./acc-transaction/acc-transaction.component').then(m => m.AccTransactionComponent) }
     ])
   ],
   providers: [],
