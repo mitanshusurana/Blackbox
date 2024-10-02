@@ -85,6 +85,10 @@ export class RecordTransactionComponent {
       party: null
     };
   }
+
+  navigateToAccTransaction() {
+    this.router.navigate(['/acc-transaction']);
+  }
 }
 
 // This is a test comment to create a difference between branches
