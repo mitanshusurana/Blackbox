@@ -49,7 +49,8 @@ export class AccTransactionComponent {
   }
 
   resetForm() {
-    this.transaction = { type: '', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 };
+    const { type, subType, action } = this.transaction;
+    this.transaction = { type, subType, action, weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 };
   }
 
   onSubmit(event: Event) {

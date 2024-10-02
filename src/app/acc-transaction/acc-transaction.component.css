@@ -64,6 +64,8 @@ button[type="reset"]:hover {
     border-radius: 4px;
     background-color: #ffffff; /* Add background color */
     z-index: 1000; /* Ensure dropdown is above other elements */
+    margin-bottom: 20px; /* Add margin to prevent overlap */
+    position: relative; /* Ensure correct positioning */
 }
 
 .ng-select .ng-select-container {
