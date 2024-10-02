@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-acc-transaction',
   standalone: true,
-  imports: [CommonModule],
+   imports: [CommonModule, FormsModule, ReactiveFormsModule, NgSelectModule],
   templateUrl: './acc-transaction.component.html',
   styleUrls: ['./acc-transaction.component.css']
 })
