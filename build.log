@@ -1,22 +1,22 @@
 ❯ Building...
 ✔ Building...
 Initial chunk files   | Names                           |  Raw size | Estimated transfer size
-chunk-YMEG6COH.js     | -                               | 177.61 kB |                40.70 kB
-chunk-5AI34I7M.js     | -                               | 163.74 kB |                46.31 kB
+chunk-PUK3C4CM.js     | -                               | 179.78 kB |                40.92 kB
+chunk-LGXW2I33.js     | -                               | 165.09 kB |                46.42 kB
 polyfills-FFHMD2TL.js | polyfills                       |  34.52 kB |                11.28 kB
-main-IUEOIPFU.js      | main                            |   3.12 kB |                 1.01 kB
-styles-5INURTSO.css   | styles                          |   0 bytes |                 0 bytes
+main-73M22FRJ.js      | main                            |   5.40 kB |                 1.12 kB
+styles-ESPIPEH6.css   | styles                          | 753 bytes |               753 bytes
 
-                      | Initial total                   | 378.98 kB |                99.30 kB
+                      | Initial total                   | 385.55 kB |               100.49 kB
 
 Lazy chunk files      | Names                           |  Raw size | Estimated transfer size
-chunk-QI37I6ZC.js     | record-transaction-component    |   2.53 kB |               915 bytes
-chunk-5S7YN53O.js     | todays-transactions-component   | 797 bytes |               797 bytes
-chunk-NA6YGN3B.js     | profit-loss-component           | 790 bytes |               790 bytes
-chunk-JQWQDLRN.js     | current-stock-summary-component | 758 bytes |               758 bytes
-chunk-FQLIHGT4.js     | party-ledger-component          | 736 bytes |               736 bytes
+chunk-MKH76BGI.js     | record-transaction-component    |   6.71 kB |                 1.80 kB
+chunk-KAXCCKTT.js     | todays-transactions-component   | 797 bytes |               797 bytes
+chunk-QSNEZCBQ.js     | profit-loss-component           | 790 bytes |               790 bytes
+chunk-USUUYECN.js     | current-stock-summary-component | 758 bytes |               758 bytes
+chunk-6KG5JAAL.js     | party-ledger-component          | 736 bytes |               736 bytes
 
-Application bundle generation complete. [3.141 seconds]
+Application bundle generation complete. [7.734 seconds]
 
-Output location: /home/user/Blackbox/dist/suranagems_workspace
+Output location: /home/user/Blackbox/docs
 
