@@ -29,7 +29,8 @@ jobs:
       run : npm run build
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        publish_dir: ./dist/Blackbox
+      run : npx angular-cli-ghpages --dir=dist/blackbox
+      env:
+        CI : true
+        gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+       
