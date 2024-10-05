@@ -11,27 +11,29 @@
     <button type="button" [class.active]="transaction.action === 'given'" (click)="setAction('given')">Given</button>
     <button type="button" [class.active]="transaction.action === 'taken'" (click)="setAction('taken')">Taken</button>
     <br>
-    <label for="party">Party:</label>
-    <ng-select [items]="parties" bindLabel="name" [formControl]="partyControl" name="party" [searchable]="true" (add)="onAddParty()">
-    </ng-select>
-    <br>
-    <div *ngIf="transaction.subType === 'metal'">
+  <label for="type">Transaction Type:</label>
+  <div>
+    <button type="button" [class.active]="transaction.type === 'sale'" (click)="setTransactionType('sale'); resetForm()">Sale</button>
+    <button type="button" [class.active]="transaction.type === 'purchase'" (click)="setTransactionType('purchase'); resetForm()">Purchase</button>
+    <button type="button" [class.active]="transaction.type === 'account'" >Account</button>
+  </div>
+  <div *ngIf="!transaction.type && accTransactionForm.submitted" class="error">Transaction type is required.</div>
+  <br>
+  <label for="party">Party:</label>
+  <ng-select [items]="parties" bindLabel="name" [formControl]="partyControl" name="party" [searchable]="true" (add)="onAddParty()">
+  </ng-select>
+  <div *ngIf="!transaction.party && accTransactionForm.submitted" class="error">Party is required.</div>
+  <br>
   <label for="weight">Weight:</label>
   <input type="number" id="weight" [(ngModel)]="transaction.weight" name="weight" required>
   <div *ngIf="!transaction.weight && accTransactionForm.submitted" class="error">Weight is required.</div>
   <br>
+  <div>Pure Metal: {{ transaction.weight * (transaction.purity / 100) }}</div>
+  <br>
   <label for="purity">Purity (%):</label>
-  <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" required>
+  <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" required min="0.00" max="100.00">
   <div *ngIf="!transaction.purity && accTransactionForm.submitted" class="error">Purity is required.</div>
-      
-    </div>
-    <div *ngIf="transaction.subType === 'cash'">
-      <label *ngIf="transaction.action === 'given'" for="cashGiven">Cash Given:</label>
-      <input *ngIf="transaction.action === 'given'" type="number" id="cashGiven" [(ngModel)]="transaction.cashGiven" name="cashGiven">
-      <label *ngIf="transaction.action === 'taken'" for="cashTaken">Cash Taken:</label>
-      <input *ngIf="transaction.action === 'taken'" type="number" id="cashTaken" [(ngModel)]="transaction.cashTaken" name="cashTaken">
-    </div>
-    <br>
+  <br>
     <button type="submit">Record Transaction</button>
     <button type="reset" (click)="resetForm()">Reset</button>
   </form>
