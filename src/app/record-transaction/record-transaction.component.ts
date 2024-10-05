@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { NgForm, FormsModule } from '@angular/forms';
+import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Router } from '@angular/router';
 
@@ -56,6 +56,10 @@ export class RecordTransactionComponent {
   }
 
   onSubmit(form: NgForm) {
+    if (form.invalid) {
+      alert('Please fill out all required fields.');
+      return;
+    }
     console.log('Transaction recorded:', this.transaction);
     this.resetForm();
   }
