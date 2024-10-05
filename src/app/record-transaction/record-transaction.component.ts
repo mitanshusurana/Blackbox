@@ -57,7 +57,7 @@ export class RecordTransactionComponent {
 
   onSubmit(form: NgForm) {
     console.log('Transaction recorded:', this.transaction);
-    form.resetForm();
+    this.resetForm();
   }
 
   calculateAmount() {

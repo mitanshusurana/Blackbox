@@ -9,7 +9,7 @@
   </div>
   <br>
   <label for="party">Party:</label>
-  <ng-select [items]="parties" bindLabel="name" [formControl]="partyControl" name="party" [searchable]="true" (add)="onAddParty()">
+  <ng-select [items]="parties" bindLabel="name" [formControl]="partyControl" [(ngModel)]="transaction.party" name="party" [searchable]="true" (add)="onAddParty()" required="true">
   </ng-select>
   <br>
   <label for="description">Description:</label>
