@@ -28,18 +28,12 @@
   <input type="number" id="weight" [(ngModel)]="transaction.weight" name="weight" required>
   <div *ngIf="!transaction.weight && accTransactionForm.submitted" class="error">Weight is required.</div>
   <br>
+  <div>Pure Metal: {{ transaction.weight * (transaction.purity / 100) }}</div>
+  <br>
   <label for="purity">Purity (%):</label>
   <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" required min="0.00" max="100.00">
   <div *ngIf="!transaction.purity && accTransactionForm.submitted" class="error">Purity is required.</div>
-      
-    </div>
-    <div *ngIf="transaction.subType === 'cash'">
-      <label *ngIf="transaction.action === 'given'" for="cashGiven">Cash Given:</label>
-      <input *ngIf="transaction.action === 'given'" type="number" id="cashGiven" [(ngModel)]="transaction.cashGiven" name="cashGiven">
-      <label *ngIf="transaction.action === 'taken'" for="cashTaken">Cash Taken:</label>
-      <input *ngIf="transaction.action === 'taken'" type="number" id="cashTaken" [(ngModel)]="transaction.cashTaken" name="cashTaken">
-    </div>
-    <br>
+  <br>
     <button type="submit">Record Transaction</button>
     <button type="reset" (click)="resetForm()">Reset</button>
   </form>

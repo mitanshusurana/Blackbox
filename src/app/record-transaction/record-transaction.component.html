@@ -29,6 +29,8 @@
   <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" (input)="calculateAmount()" required min="0.00" max="100.00">
   <div *ngIf="!transaction.purity && recordTransactionForm.submitted" class="error">Purity is required.</div>
   <br>
+  <div>Pure Metal: {{ transaction.weight * (transaction.purity / 100) }}</div>
+  <br>
   <label for="amount">Amount:</label>
   <input type="number" id="amount" [(ngModel)]="transaction.amount" name="amount" readonly>
   <br>
