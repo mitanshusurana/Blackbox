@@ -20,7 +20,7 @@ export class RecordTransactionComponent {
     description: '',
     weight: 0,
     rate: 0,
-    purity: 0,
+    purity: 100,
     amount: 0,
     cashTaken: 0,
     cashGiven: 0,

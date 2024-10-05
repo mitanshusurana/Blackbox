@@ -14,7 +14,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
   styleUrls: ['./acc-transaction.component.css']
 })
 export class AccTransactionComponent {
-  transaction = { type: 'account', subType: '', action: '', weight: 0, purity: 0, cashGiven: 0, cashTaken: 0 }; // Set account as default
+  transaction = { type: 'account', subType: '', action: '', weight: 0, purity: 100, cashGiven: 0, cashTaken: 0 }; // Set account as default
   parties = [
     { name: 'Party A' },
     { name: 'Party B' },

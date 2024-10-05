@@ -11,6 +11,7 @@
   <label for="party">Party:</label>
   <ng-select [items]="parties" bindLabel="name" [formControl]="partyControl" [(ngModel)]="transaction.party" name="party" [searchable]="true" (add)="onAddParty()" required="true">
   </ng-select>
+  <div *ngIf="!transaction.party && recordTransactionForm.submitted" class="error">Party is required.</div>
   <br>
   <label for="description">Description:</label>
   <input type="text" id="description" [(ngModel)]="transaction.description" name="description" required>
@@ -25,7 +26,7 @@
   <div *ngIf="!transaction.rate && recordTransactionForm.submitted" class="error">Rate is required.</div>
   <br>
   <label for="purity">Purity (%):</label>
-  <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" (input)="calculateAmount()" required>
+  <input type="number" id="purity" [(ngModel)]="transaction.purity" name="purity" (input)="calculateAmount()" required min="0.00" max="100.00">
   <div *ngIf="!transaction.purity && recordTransactionForm.submitted" class="error">Purity is required.</div>
   <br>
   <label for="amount">Amount:</label>
